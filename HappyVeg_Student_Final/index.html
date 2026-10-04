@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HappyVeg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header">
+        <table class="logo">
+            <tr>
+                <td>
+                    <img src="logo.png">
+                </td>
+                <td>
+                    <h2>HappyVeg</h2>
+                </td>
+            </tr>
+        </table>
+
+        <input type="text" id="search" placeholder="Search here...">
+        <button onclick="search()">🔍</button>
+        <button class="cartButton" onclick="openCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+    </div>
+
+    <nav>
+        <a onclick="showPage('home')">HOME</a>
+        <a onclick="showPage('signup')">ACCOUNT CREATION</a>
+        <a onclick="showPage('login')">LOGIN</a>
+        <a onclick="showPage('vegetables')">VEGETABLES</a>
+        <a onclick="showPage('offer')">OFFER</a>
+        <a onclick="showPage('contact')">CONTACT US</a>
+    </nav>
+</header>
+
+<div id="home" class="page">
+    <div class="home">
+        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80">
+        <div class="homeText">
+            <p>Fresh And Organic</p>
+            <h1>Your Daily Need<br>Products</h1>
+            <button onclick="showPage('vegetables')">SHOP NOW</button>
+        </div>
+    </div>
+
+    <div class="services">
+        <div>🌱<br><b>Fresh Vegetables</b><br><small>Fresh and healthy products</small></div>
+        <div>🚚<br><b>Fast Delivery</b><br><small>Quick home delivery</small></div>
+        <div>🥕<br><b>Best Quality</b><br><small>Good quality products</small></div>
+    </div>
+</div>
+
+<div id="signup" class="page">
+    <div class="formPage">
+        <div class="formBox">
+            <h1>CREATE YOUR PROFILE</h1>
+
+            <form onsubmit="signup(event)">
+                <label>FULL NAME</label>
+                <input id="name" required>
+
+                <label>GENDER</label>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+
+                <label>PHONE NUMBER</label>
+                <input id="phone" required>
+
+                <label>COUNTRY</label>
+                <select>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                </select>
+
+                <label>HOME ADDRESS</label>
+                <textarea></textarea>
+
+                <button>SUBMIT</button>
+            </form>
+
+            <p>Already have an account?
+                <a onclick="showPage('login')">Login here</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="login" class="page">
+    <div class="loginPage">
+        <div class="loginBox">
+            <div class="loginForm">
+                <h1>LOGIN HERE</h1>
+
+                <label>EMAIL</label>
+                <input id="loginEmail" type="email">
+
+                <label>PASSWORD</label>
+                <input id="loginPassword" type="password">
+
+                <button onclick="login()">LOGIN</button>
+
+                <p>Don't have an account?
+                    <a onclick="showPage('signup')">Sign Up</a>
+                </p>
+
+                <p>Forgot your password?
+                    <a onclick="alert('Please contact us.')">Click Here</a>
+                </p>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=700&q=80">
+        </div>
+    </div>
+</div>
+
+<div id="vegetables" class="page">
+    <h1 class="title">VEGETABLES</h1>
+
+    <div class="shopArea">
+        <div id="products" class="products"></div>
+
+        <div id="cartBox" class="cartBox">
+            <h2>Shopping Cart</h2>
+            <div id="cartItems">
+                <p>Your cart is empty.</p>
+            </div>
+
+            <hr>
+            <h3>Total Amount: ₹<span id="total">0</span></h3>
+
+            <button onclick="checkout()">CHECKOUT</button>
+        </div>
+    </div>
+</div>
+
+<div id="offer" class="page">
+    <div class="offer">
+        <h1>Hurry...!! Get Extra Discount</h1>
+        <p>Limited Time Offer</p>
+
+        <div class="time">
+            <span>16<br><small>Days</small></span>
+            <span>04<br><small>Hours</small></span>
+            <span>44<br><small>Minutes</small></span>
+            <span>43<br><small>Seconds</small></span>
+        </div>
+
+        <button onclick="showPage('vegetables')">CHECK THE DEALS</button>
+    </div>
+</div>
+
+<div id="contact" class="page">
+    <div class="contact">
+        <h1>CONTACT US</h1>
+        <p>We are happy to help you.</p>
+
+        <input placeholder="Your Name">
+        <input placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+
+        <button onclick="alert('Message sent successfully!')">
+            SEND MESSAGE
+        </button>
+    </div>
+</div>
+
+<footer>
+    <div class="footerContent">
+
+        <div class="footerColumn">
+            <h2>HappyVeg</h2>
+            <p>Fresh, Healthy And Organic Vegetables</p>
+            <p>Facebook</p>
+            <p>X</p>
+            <p>Instagram</p>
+        </div>
+
+        <div class="footerColumn">
+            <h2>Our Location</h2>
+            <p>India</p>
+            <p>USA</p>
+            <p>Korea</p>
+            <p>Japan</p>
+            <p>Russia</p>
+        </div>
+
+        <div class="footerColumn">
+            <h2>Quick Links</h2>
+            <p onclick="showPage('home')">Home</p>
+            <p onclick="showPage('signup')">Profile Creation</p>
+            <p onclick="showPage('login')">Login</p>
+            <p onclick="showPage('vegetables')">Vegetables</p>
+            <p onclick="showPage('offer')">Offers</p>
+            <p onclick="showPage('contact')">Contact Us</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        Created By My Company | All Rights Reserved
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

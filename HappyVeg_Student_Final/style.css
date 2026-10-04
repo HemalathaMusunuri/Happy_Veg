@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #444;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo {
+    margin-right: 100px;
+}
+.logo img {
+    width: 90px;
+    height: 70px;
+}
+.logo h2 {
+    color: #159447;
+    font-size:32px;
+    font-family: "Segoe Print",
+    cursive;
+    padding-left:10px;
+}
+
+.header input {
+    width: 220px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.header button {
+    padding: 12px 15px;
+    border: 0;
+    background: #10c981;
+    color: white;
+    cursor: pointer;
+}
+
+.cartButton {
+    margin-left: 15px;
+}
+
+nav {
+    background: #10c981;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.page {
+    display: none;
+    min-height: 620px;
+}
+
+#home {
+    display: block;
+}
+
+.home {
+    min-height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    background: #f7fffc;
+}
+
+.home img {
+    width: 500px;
+    height: 330px;
+    object-fit: cover;
+}
+
+.homeText p {
+    font-size: 20px;
+    color: #888;
+}
+
+.homeText h1 {
+    font-size: 45px;
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+button {
+    background: #10c981;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 35px;
+}
+
+.services div {
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    font-size: 22px;
+}
+
+.services small {
+    color: #888;
+    font-size: 13px;
+}
+
+.formPage {
+    min-height: 620px;
+    padding: 40px;
+    background: url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1500&q=80") center/cover;
+}
+
+.formBox {
+    width: 480px;
+    margin: auto;
+    padding: 30px 45px;
+    background: rgba(0,0,0,.65);
+    color: white;
+}
+
+.formBox h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formBox label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.formBox input:not([type="radio"]),
+.formBox select,
+.formBox textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+.formBox textarea {
+    height: 60px;
+}
+
+.formBox a,
+.loginForm a {
+    color: #10d88a;
+    cursor: pointer;
+}
+
+.formBox p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.loginPage {
+    min-height: 620px;
+    background: #eafff6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox {
+    width: 850px;
+    display: flex;
+    background: white;
+}
+
+.loginForm {
+    width: 50%;
+    padding: 50px;
+}
+
+.loginForm h1 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.loginForm label {
+    display: block;
+    margin: 12px 0 5px;
+}
+
+.loginForm input {
+    width: 100%;
+    padding: 11px;
+}
+
+.loginForm button {
+    margin-top: 15px;
+}
+
+.loginForm p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.loginBox img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.title {
+    text-align: center;
+    font-weight: normal;
+    padding: 40px 0 20px;
+}
+
+.shopArea {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 10px 5% 50px;
+}
+
+.products {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 12px;
+    background: white;
+}
+
+.product img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin: 10px;
+    font-weight: normal;
+}
+
+.product p {
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.cartBox {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #fff;
+    position: sticky;
+    top: 20px;
+}
+
+.cartBox h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cartItem {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+.cartItem img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+}
+
+.cartDetails {
+    flex: 1;
+}
+
+.cartDetails h4 {
+    margin-bottom: 5px;
+}
+
+.quantity button {
+    padding: 3px 8px;
+    margin: 3px;
+}
+
+.remove {
+    background: #e74c3c;
+    padding: 5px 8px;
+}
+
+.cartBox h3 {
+    margin: 20px 0;
+}
+
+.offer {
+    width: 750px;
+    max-width: 90%;
+    margin: 100px auto;
+    padding: 60px;
+    text-align: center;
+    background: #effff8;
+}
+
+.offer h1 {
+    font-weight: normal;
+}
+
+.offer p {
+    margin: 15px;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px;
+}
+
+.time span {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 15px 20px;
+    font-size: 28px;
+}
+
+.contact {
+    width: 500px;
+    margin: 60px auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+}
+
+.contact textarea {
+    height: 120px;
+}
+
+footer {
+    background: #08c981;
+    color: white;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-around;
+    padding: 45px 8%;
+    min-height: 280px;
+}
+
+.footerColumn {
+    width: 28%;
+}
+
+.footerColumn h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.footerColumn p {
+    margin: 13px 0;
+    cursor: pointer;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.15);
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shopArea {
+        flex-direction: column;
+    }
+
+    .cartBox {
+        width: 100%;
+        position: static;
+    }
+}
+
+@media(max-width: 700px) {
+    .logo {
+        margin-right: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .home {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .home img {
+        width: 90%;
+    }
+
+    .loginBox {
+        width: 90%;
+    }
+
+    .loginBox img {
+        display: none;
+    }
+
+    .loginForm {
+        width: 100%;
+    }
+
+    .footerContent {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footerColumn {
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        height: auto;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+}
